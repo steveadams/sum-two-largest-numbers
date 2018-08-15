@@ -9,6 +9,8 @@
   ],
   "main": "./src/sumTwoLargestNumbers.js",
   "author": "Steve Adams",
+  "license": "MIT",
+  "types": "./dist/types.d.ts",
   "scripts": {
     "build": "tsc",
     "lint": "tslint -c tslint.json ./**/*.ts",
