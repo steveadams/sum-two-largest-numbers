@@ -1,7 +1,7 @@
 {
   "name": "sum-two-largest-numbers",
-  "version": "0.1.0",
-  "description": "A simple experiment in summing the two largest numbers in an array",
+  "version": "0.1.1",
+  "description": "Sum the two largest numbers in an array",
   "repository": "https://bitbucket.org/steve-adams/sum-two-largest-numbers",
   "bugs": "https://bitbucket.org/steve-adams/sum-two-largest-numbers/issues",
   "contributors": [
