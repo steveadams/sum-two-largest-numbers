@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "rootDir": "./src",
-    "outDir": "dist",
+    "outDir": "./javascript",
     "sourceMap": true,
     "module": "commonjs",
     "target": "es2017",
@@ -14,9 +14,6 @@
     "strict": true,
     "declaration": true
   },
-  "include": [
-    "src/**/*"
-  ],
   "exclude": [
     "node_modules",
     "**/*.spec.ts"
