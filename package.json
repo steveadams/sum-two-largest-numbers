@@ -14,8 +14,9 @@
   "scripts": {
     "build": "tsc",
     "lint": "tslint -c tslint.json ./**/*.ts",
+    "test": "jest --verbose",
     "pretest": "yarn run lint",
-    "test": "jest --verbose"
+    "prepublishOnly": "tsc"
   },
   "devDependencies": {
     "@types/jest": "^23.3.1",
