@@ -13,11 +13,9 @@ Usage in TypeScript or JavaScript is essentially the same, though your import/re
 ### TypeScript
 
 ```typescript
-import sumTwoLargestNumbers from 'sum-two-largest-numbers';
+import sumTwoLargest from 'sum-two-largest-numbers';
 
-arrayToSum = [5, 3, 10, 8];
-
-sumTwoLargestNumbers(arrayToSum);
+sumTwoLargest([5, 3, 10, 8]);
 
 >> 18
 ```
@@ -25,11 +23,9 @@ sumTwoLargestNumbers(arrayToSum);
 ### Javascript
 
 ```javascript
-sumTwoLargestNumbers = require('sum-two-largest-numbers');
+sumTwoLargest = require('sum-two-largest-numbers');
 
-arrayToSum = [5, 3, 10, 8];
-
-sumTwoLargestNumbers(arrayToSum);
+sumTwoLargest([5, 3, 10, 8]);
 
 >> 18
 ```
