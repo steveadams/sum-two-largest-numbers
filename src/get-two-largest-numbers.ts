@@ -20,4 +20,4 @@ const getTwoLargestNumbers = (largest: Tuple<number>, current: number): Tuple<nu
   return largest;
 };
 
-export default getTwoLargestNumbers;
+export { getTwoLargestNumbers };
