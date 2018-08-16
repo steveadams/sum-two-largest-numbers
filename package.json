@@ -1,6 +1,6 @@
 {
   "name": "sum-two-largest-numbers",
-  "version": "0.1.5",
+  "version": "0.1.8",
   "description": "Sum the two largest numbers in an array",
   "repository": "https://bitbucket.org/steve-adams/sum-two-largest-numbers",
   "bugs": "https://bitbucket.org/steve-adams/sum-two-largest-numbers/issues",

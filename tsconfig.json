@@ -15,6 +15,7 @@
     "declaration": true
   },
   "exclude": [
+    "javascript",
     "node_modules",
     "**/*.spec.ts"
   ]
