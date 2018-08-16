@@ -12,7 +12,7 @@
     "array",
     "max"
   ],
-  "main": "./javascript/sum-two-largest-numbers.js",
+  "main": "./javascript/index.js",
   "types": "./javascript/index.d.ts",
   "author": "Steve Adams",
   "license": "MIT",
