@@ -18,6 +18,10 @@ it('Sums negative numbers properly: [-10, -5, -1, -3]', () => {
   expect(sumTwoLargestNumbers([-10, -5, -1, -3])).toBe(-4);
 });
 
+it('Sums properly when first number is smaller than second number: [90, 182, 139, 3, 6]', () => {
+  expect(sumTwoLargestNumbers([90, 182, 139, 3, 6])).toBe(321);
+});
+
 it('Fails to sum [5]', () => {
   try {
     // Defining [5] as any to silence "not assignable to ... 'ArrayOfTwoOrMore<number>'"
