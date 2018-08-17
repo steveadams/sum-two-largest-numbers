@@ -13,7 +13,7 @@ Usage in TypeScript or JavaScript is essentially the same, though your import/re
 ### TypeScript
 
 ```typescript
-import sumTwoLargest from 'sum-two-largest-numbers';
+import * as sumTwoLargest from 'sum-two-largest-numbers';
 
 sumTwoLargest([5, 3, 10, 8]);
 
