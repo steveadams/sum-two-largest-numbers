@@ -1,6 +1,6 @@
 /* tslint:disable:no-magic-numbers */
 
-import { sumTwoLargestNumbers } from '../src/sum-two-largest-numbers';
+import * as sumTwoLargestNumbers from '../src';
 
 it('Sums small arrays: [1, 1]', () => {
   expect(sumTwoLargestNumbers([1, 1])).toBe(2);

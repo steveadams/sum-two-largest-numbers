@@ -1,19 +1,27 @@
 {
   "name": "sum-two-largest-numbers",
-  "version": "0.1.0",
-  "description": "A simple experiment in summing the two largest numbers in an array",
+  "version": "0.2.0",
+  "description": "Sum the two largest numbers in an array",
   "repository": "https://bitbucket.org/steve-adams/sum-two-largest-numbers",
   "bugs": "https://bitbucket.org/steve-adams/sum-two-largest-numbers/issues",
   "contributors": [
     "steve@steve-adams.me"
   ],
-  "main": "./src/sumTwoLargestNumbers.js",
+  "keywords": [
+    "sum",
+    "array",
+    "max"
+  ],
+  "main": "./javascript/index.js",
+  "types": "./javascript/index.d.ts",
   "author": "Steve Adams",
+  "license": "MIT",
   "scripts": {
     "build": "tsc",
     "lint": "tslint -c tslint.json ./**/*.ts",
+    "test": "jest --verbose",
     "pretest": "yarn run lint",
-    "test": "jest --verbose"
+    "prepublishOnly": "tsc"
   },
   "devDependencies": {
     "@types/jest": "^23.3.1",
