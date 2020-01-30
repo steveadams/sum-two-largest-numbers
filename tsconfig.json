@@ -1,22 +1,19 @@
 {
   "compilerOptions": {
-    "rootDir": "./src",
-    "outDir": "./javascript",
     "sourceMap": true,
     "module": "commonjs",
-    "target": "es2017",
-    "noUnusedParameters": true,
-    "noUnusedLocals": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "strictNullChecks": true,
-    "pretty": true,
-    "strict": true,
-    "declaration": true
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "jsx": "react",
+    "lib": ["DOM", "ES6"],
+    "outDir": "public",
+    "moduleResolution": "node",
+    "types": ["jest"],
+    "typeRoots": ["./types", "./node_modules/@types"]
   },
-  "exclude": [
-    "javascript",
-    "node_modules",
-    "**/*.spec.ts"
-  ]
+  "include": ["src"],
+  "exclude": ["node_modules/**"],
+  "compileOnSave": false
 }

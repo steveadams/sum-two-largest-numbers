@@ -1,3 +1,3 @@
-type ArrayOfTwoOrMore<T> = { 0: T, 1: T } & T[];
+type Tuple<A, B = A> = [A, B];
 
-type Tuple<T> = [T, T];
+type ArrayOfTwoOrMore<T> = [T, T, ...T[]];

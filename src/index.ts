@@ -1,20 +1,18 @@
-import * as getTwoLargestNumbers from './get-two-largest-numbers';
-import * as sum from './sum';
-
-const numberToSum = 2;
+import swapInLargerNumbers from './swap-in-larger-numbers';
 
 /**
  * Sums the two largest numbers in an array of numbers.
  */
-const sumTwoLargestNumbers = (numbers: ArrayOfTwoOrMore<number>): number => {
-  const firstNumbers = numbers
-    .slice(0, numberToSum)
-    .sort((a: number, b: number) => b - a) as Tuple<number>;
-  const restOfNumbers = numbers.slice(numberToSum);
+export default function sumTwoLargestNumbers(
+  numbers: ArrayOfTwoOrMore<number>
+): number {
+  if (numbers.length < 2) {
+    throw new TypeError('Expected an Array of 2 numbers or more.');
+  }
 
-  return restOfNumbers
-    .reduce(getTwoLargestNumbers, firstNumbers)
-    .reduce(sum, 0);
-};
+  const [first, second, ...rest] = numbers;
 
-export = sumTwoLargestNumbers;
+  return rest
+    .reduce(swapInLargerNumbers, [first, second].sort())
+    .reduce((a, b) => a + b, 0);
+}
