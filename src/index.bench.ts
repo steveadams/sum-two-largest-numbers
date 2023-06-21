@@ -1,10 +1,6 @@
 import { run, bench, group } from 'mitata';
 
-import {
-  TwoOrMoreNumbers,
-  sumTwoLargestNumbers,
-  sumTwoLargestNumbersSort,
-} from './index';
+import { TwoOrMoreNumbers, sumTwoLargestNumbers } from './index';
 
 const randomNumber = () => Math.floor(Math.random() * 40);
 const makeArrayOfLength = (length: number): TwoOrMoreNumbers => [
@@ -18,18 +14,9 @@ const mediumArray = makeArrayOfLength(100);
 const largeArray = makeArrayOfLength(1000);
 
 group('sumTwoLargestNumbers: Small arrays', () => {
-  bench('for loop', () => sumTwoLargestNumbers(smallArray));
-  bench('sort and pick', () => sumTwoLargestNumbersSort(smallArray));
-});
-
-group('sumTwoLargestNumbers: Medium arrays', () => {
-  bench('for loop', () => sumTwoLargestNumbers(mediumArray));
-  bench('sort and pick', () => sumTwoLargestNumbersSort(mediumArray));
-});
-
-group('sumTwoLargestNumbers: Large arrays', () => {
-  bench('for loop', () => sumTwoLargestNumbers(largeArray));
-  bench('sort and pick', () => sumTwoLargestNumbersSort(largeArray));
+  bench('Small arrays', () => sumTwoLargestNumbers(smallArray));
+  bench('Medium arrays', () => sumTwoLargestNumbers(mediumArray));
+  bench('Large arrays', () => sumTwoLargestNumbers(largeArray));
 });
 
 await run();

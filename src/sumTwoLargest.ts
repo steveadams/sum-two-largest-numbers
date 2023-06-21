@@ -38,20 +38,3 @@ export const sumTwoLargestNumbers = (numbers: TwoOrMoreNumbers): number => {
 
   return largest + secondLargest;
 };
-
-/**
- * Sums the two largest numbers in an array of numbers.
- */
-export const sumTwoLargestNumbersSort = (numbers: TwoOrMoreNumbers): number => {
-  // Is the array long enough to sum?
-  if (numbers.length < 2) {
-    throw new TypeError('Expected an array with at least 2 elements.');
-  }
-
-  // Sort the array large -> small
-  numbers = numbers.sort(function (a, b) {
-    return b - a;
-  });
-
-  return numbers[0] + numbers[1];
-};
