@@ -1,140 +1,34 @@
 {
   "name": "sum-two-largest-numbers",
-  "version": "0.2.2",
-  "description": "Sum the two largest numbers in an array",
-  "repository": "https://bitbucket.org/steve-adams/sum-two-largest-numbers",
-  "bugs": "https://bitbucket.org/steve-adams/sum-two-largest-numbers/issues",
-  "engines": {
-    "node": "^10.16.2",
-    "npm": "^6.13.6"
-  },
+  "version": "1.0.0",
+  "description": "Sum the two largest values in an array of numbers",
+  "type": "module",
+  "repository": "https://github.com/steveadams/sum-two-largest-numbers",
+  "bugs": "https://github.com/steveadams/sum-two-largest-numbers/issues",
   "contributors": [
     "steve@steve-adams.me"
   ],
   "keywords": [
     "sum",
-    "array",
-    "max"
+    "array"
   ],
   "main": "./javascript/index.js",
   "types": "./javascript/index.d.ts",
   "author": "Steve Adams",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
-    "test": "jest --verbose",
+    "build": "tsc --p tsconfig.build.json",
+    "test": "vitest --reporter=verbose",
+    "benchmark": "ts-node scripts/benchmark.ts",
+    "save-benchmarks": "ts-node scripts/benchmark.ts > ./benchmarks/benchmarks.json",
     "prepublishOnly": "tsc"
   },
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.0.2",
-    "jest": "^24.9.0",
-    "jest-extended": "^0.11.4",
-    "ts-jest": "^24.3.0",
-    "typescript": "^3.7.5"
-  },
   "devDependencies": {
-    "@testing-library/react": "^9.4.0",
-    "@types/jest": "24.9.0",
-    "@types/react": "^16.9.18",
-    "@types/react-dom": "^16.9.5",
-    "@types/react-star-rating-component": "^1.4.0",
-    "@typescript-eslint/eslint-plugin": "^2.17.0",
-    "@typescript-eslint/parser": "^2.17.0",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-airbnb-typescript": "^6.3.1",
-    "eslint-config-prettier": "^6.9.0",
-    "eslint-plugin-import": "^2.20.0",
-    "eslint-plugin-jest": "^23.6.0",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.18.0",
-    "eslint-plugin-react-hooks": "^2.3.0",
-    "eslint-plugin-tsc": "^1.2.0",
-    "husky": "^4.2.0",
-    "lint-staged": "^10.0.1",
-    "parcel-bundler": "^1.12.4",
-    "prettier": "^1.19.1",
-    "typescript": "^3.7.5"
-  },
-  "jest": {
-    "preset": "ts-jest",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ],
-    "setupFilesAfterEnv": [
-      "<rootDir>/src/setupTests.ts"
-    ],
-    "testMatch": [
-      "**/*.spec.ts"
-    ],
-    "globals": {
-      "ts-jest": {
-        "diagnostics": {
-          "warnOnly": true
-        }
-      }
-    }
-  },
-  "eslintConfig": {
-    "root": true,
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "tsconfigRootDir": "./",
-      "project": [
-        "tsconfig.json"
-      ],
-      "ecmaFeatures": {
-        "jsx": true
-      }
-    },
-    "plugins": [
-      "@typescript-eslint",
-      "jest"
-    ],
-    "extends": [
-      "plugin:@typescript-eslint/recommended-requiring-type-checking",
-      "plugin:jest/recommended",
-      "plugin:react/recommended",
-      "airbnb-typescript",
-      "prettier/@typescript-eslint",
-      "prettier",
-      "prettier/react"
-    ],
-    "rules": {
-      "no-param-reassign": [
-        "error",
-        {
-          "props": true,
-          "ignorePropertyModificationsFor": [
-            "draft"
-          ]
-        }
-      ],
-      "react/static-property-placement": "off",
-      "@typescript-eslint/unbound-method": "off",
-      "import/no-extraneous-dependencies": [
-        "error",
-        {
-          "devDependencies": [
-            "src/tests/**"
-          ]
-        }
-      ]
-    }
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,md,css,html}": [
-      "prettier --trailing-comma es5 --single-quote --write"
-    ],
-    "yarn.lock": [
-      "git rm --cached"
-    ]
+    "glob": "^10.2.7",
+    "mitata": "^0.1.6",
+    "prettier": "^2.8.8",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.3",
+    "vitest": "^0.32.2"
   }
 }

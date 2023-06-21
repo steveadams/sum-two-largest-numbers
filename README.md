@@ -4,11 +4,11 @@ This package accepts any array of numbers and sums the highest 2 values.
 
 ## Installation
 
-Once you've cloned the repository, just run `yarn`.
+```bash
+npm install sum-two-largest-numbers
+```
 
 ## Usage
-
-Usage in TypeScript or JavaScript is essentially the same, though your import/require syntax may vary.
 
 ### TypeScript
 
@@ -20,20 +20,25 @@ sumTwoLargest([5, 3, 10, 8]);
 >> 18
 ```
 
-### Javascript
+## Testing and Benchmarking
 
-```javascript
-sumTwoLargest = require('sum-two-largest-numbers');
-
-sumTwoLargest([5, 3, 10, 8]);
-
->> 18
+```bash
+npm run tests
+# >
+npm run bench
+# >
 ```
-
-## Testing
-
-To run the tests, just run `yarn tests` or `npm run tests`.
 
 ## Contributing
 
-If you feel like suggesting improvements, I'd happily accept and review pull requests - Just make sure the linter is happy and tests are passing.
+If you want to suggest improvements, I'll gladly accept and review pull requests. Make sure the linter is happy and tests are passing.
+
+```
+git clone git@github.com:steveadams/sum-two-largest-numbers.git .
+cd sum-two-largest-numbers
+npm install
+```
+
+## License
+
+[MIT](LICENSE)
